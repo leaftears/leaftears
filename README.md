@@ -1,4 +1,4 @@
-<h1 align="center"> Leaftears </h1>
+<h1 align="center"> vy </h1>
 
 <p align="center">
   Future computer engineer(optional) with a passion for Linux, system-level programming, and clean interface design.<br>
