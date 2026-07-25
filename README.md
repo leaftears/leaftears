@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=change4u&label=Profile+Views&color=0e75b6&style=flat-square" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=mika2go&label=Profile+Views&color=0e75b6&style=flat-square" alt="Profile views" />
 </p>
 
 I work across web platforms, backend services, automation, and Windows desktop applications. I enjoy turning complex workflows into focused products with clean interfaces, reliable infrastructure, and maintainable code.
@@ -25,12 +25,12 @@ I work across web platforms, backend services, automation, and Windows desktop a
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/change4u/x-queue">x-queue</a></h3>
+      <h3><a href="https://github.com/mika2go/x-queue">x-queue</a></h3>
       <p>A minimal news-driven posting queue with mandatory human approval, one-click X composer handoff, scheduled generation, and optional Claude-powered drafts.</p>
       <p><code>Python</code> <code>FastAPI</code> <code>HTML</code> <code>GitHub Actions</code> <code>Anthropic API</code></p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/change4u/ChillTimer">ChillTimer</a></h3>
+      <h3><a href="https://github.com/mika2go/ChillTimer">ChillTimer</a></h3>
       <p>A focused Windows Pomodoro timer with a custom interface, tray integration, and a lightweight desktop experience.</p>
       <p><code>C#</code> <code>.NET 8</code> <code>Windows</code></p>
     </td>
@@ -44,12 +44,12 @@ I work across web platforms, backend services, automation, and Windows desktop a
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/change4u/eddy">Eddy</a></h3>
+      <h3><a href="https://github.com/mika2go/eddy">Eddy</a></h3>
       <p>I contributed only the Windows version, including native platform integration and Windows installer packaging.</p>
       <p><code>Windows</code> <code>C++</code> <code>Qt</code> <code>CMake</code> <code>MSI</code> <code>NSIS</code></p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/change4u/boltsnap">BoltSnap</a></h3>
+      <h3><a href="https://github.com/mika2go/boltsnap">BoltSnap</a></h3>
       <p>I contributed only the Windows version of the fast screenshot and annotation workflow.</p>
       <p><code>Windows</code> <code>Rust</code> <code>Screen Capture</code></p>
     </td>
@@ -69,7 +69,7 @@ I work across web platforms, backend services, automation, and Windows desktop a
 ## Activity
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=change4u&theme=transparent&hide_border=true&border_radius=12&date_format=M%20j%5B%2C%20Y%5D&ring=2F81F7&fire=2F81F7&currStreakLabel=2F81F7&sideLabels=8B949E&dates=6E7681&sideNums=C9D1D9&currStreakNum=C9D1D9&stroke=30363D&card_width=760" alt="GitHub contribution streak" />
+  <img src="https://streak-stats.demolab.com?user=mika2go&theme=transparent&hide_border=true&border_radius=12&date_format=M%20j%5B%2C%20Y%5D&ring=2F81F7&fire=2F81F7&currStreakLabel=2F81F7&sideLabels=8B949E&dates=6E7681&sideNums=C9D1D9&currStreakNum=C9D1D9&stroke=30363D&card_width=760" alt="GitHub contribution streak" />
 </p>
 
 ---
