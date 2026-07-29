@@ -17,8 +17,6 @@
   QML, or Python.
 </p>
 
-<br clear="right" />
-
 ---
 
 ## Professional Focus
