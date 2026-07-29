@@ -9,7 +9,7 @@
 </p>
 
 <p>
-  <img align="right" src="./assets/nova-smiley.gif" width="112" alt="Nova smiling mascot" />
+  <img align="right" src="./assets/nova-smiley-compact.gif" width="112" alt="Nova smiling mascot" />
   I build open-source software close to the operating system: native desktop
   applications, Linux and Wayland integrations, developer tools, and the small
   services that connect them. My recent work spans instant replay capture,
