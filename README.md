@@ -8,6 +8,10 @@
   <img src="https://komarev.com/ghpvc/?username=mika2go&label=Profile+Views&color=0e75b6&style=flat-square" alt="Profile views" />
 </p>
 
+<p align="center">
+  <img src="./assets/nova-smiley.gif" width="112" alt="Nova smiling mascot" />
+</p>
+
 I build open-source software close to the operating system: native desktop
 applications, Linux and Wayland integrations, developer tools, and the small
 services that connect them. My recent work spans instant replay capture,
