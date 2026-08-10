@@ -1,38 +1,34 @@
+<h1 align="center">Mika</h1>
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,60:1f3d68,100:2F81F7&height=190&section=header&text=Mika&fontSize=68&fontColor=ffffff&fontAlignY=34&desc=local-first%20desktop%20software&descAlignY=56&descSize=17" alt="Mika" />
+  <strong>Building local-first desktop tools, Linux workflows, and focused interfaces.</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/mika2go?tab=repositories">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=21&pause=1200&color=2F81F7&center=true&vCenter=true&width=600&height=42&lines=Native+desktop+tools+that+stay+out+of+the+way;Linux+and+Windows+internals;Small+footprints+and+honest+status" alt="Native desktop tools, Linux and Windows internals, small footprints" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=mika2go&label=Profile+Views&color=2F81F7&style=flat-square" alt="Profile views" />
-  <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
-  <img src="https://img.shields.io/badge/Linux-0d1117?style=flat-square&logo=linux&logoColor=FCC624" alt="Linux" />
-  <img src="https://img.shields.io/badge/Wayland-0d1117?style=flat-square&logo=wayland&logoColor=white" alt="Wayland" />
-  <img src="https://img.shields.io/badge/License-MIT-2F81F7?style=flat-square" alt="MIT licensed projects" />
+  <img src="https://komarev.com/ghpvc/?username=mika2go&label=Profile+Views&color=0e75b6&style=flat-square" alt="Profile views" />
 </p>
 
 <p>
   <img align="right" src="./assets/nova-smiley-compact.gif" width="112" alt="Nova smiling mascot" />
   I build open-source software close to the operating system: native desktop
   applications, Linux and Wayland integrations, developer tools, and the small
-  services that connect them. Recent work spans instant replay capture,
-  repository visibility, process management, and a custom desktop shell — usually
-  in Rust, C++, Qt, QML, or Python.
+  services that connect them. My recent work spans instant replay capture,
+  repository visibility, and a custom desktop shell—usually with Rust, C++, Qt,
+  QML, or Python.
 </p>
 
-<br clear="right" />
+---
 
-## Focus
+## Professional Focus
 
-- Local-first desktop software with small native footprints and clear privacy boundaries.
-- Deep integration with Linux desktops: Wayland, Hyprland, KDE Plasma, systemd user services, hardware-accelerated media.
-- Native Windows work where it matters: Direct2D interfaces, Media Foundation, WASAPI.
-- Turning complex system behaviour into quiet interfaces with honest status and explicit platform support.
+- Building local-first desktop software with small native footprints and clear
+  privacy boundaries.
+- Integrating tools deeply with Linux desktops, including Wayland, Hyprland,
+  KDE Plasma, systemd user services, and hardware-accelerated media workflows.
+- Turning complex system behavior into quiet interfaces with honest status,
+  explicit platform support, and maintainable foundations.
+
+---
 
 ## Featured Projects
 
@@ -63,6 +59,8 @@
   </tr>
 </table>
 
+---
+
 ## Open Source Contributions
 
 <table>
@@ -80,31 +78,22 @@
   </tr>
 </table>
 
-## Stack
+---
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=rust,cpp,qt,cs,dotnet,python,fastapi,ts,react,tailwind,nodejs,tauri,supabase,linux&perline=14" alt="Rust, C++, Qt, C sharp, .NET, Python, FastAPI, TypeScript, React, Tailwind CSS, Node.js, Tauri, Supabase, Linux" />
+## Core Stack
+
+<p>
+  <img src="https://skillicons.dev/icons?i=ts,react,tailwind,nodejs,python,fastapi,cs,dotnet,cpp,rust,tauri,supabase&perline=12" alt="TypeScript, React, Tailwind CSS, Node.js, Python, FastAPI, C sharp, .NET, C plus plus, Rust, Tauri, and Supabase" />
 </p>
 
-## GitHub in Numbers
+---
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mika2go&theme=github_dark" alt="Profile summary" />
-</p>
-
-<p align="center">
-  <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=mika2go&theme=github_dark" alt="Repositories per language" />
-  <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=mika2go&theme=github_dark" alt="Most committed languages" />
-</p>
+## Activity
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=mika2go&theme=transparent&hide_border=true&border_radius=12&date_format=M%20j%5B%2C%20Y%5D&ring=2F81F7&fire=2F81F7&currStreakLabel=2F81F7&sideLabels=8B949E&dates=6E7681&sideNums=C9D1D9&currStreakNum=C9D1D9&stroke=30363D&card_width=760" alt="GitHub contribution streak" />
 </p>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mika2go&days=31&bg_color=00000000&color=C9D1D9&line=2F81F7&point=2F81F7&area_color=2F81F7&area=true&hide_border=true&hide_title=false&custom_title=Commits%20over%20the%20last%2031%20days" alt="Commit activity over the last 31 days" />
-</p>
+---
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2F81F7,40:1f3d68,100:0d1117&height=120&section=footer&text=useful%20software%20%C2%B7%20quiet%20interfaces&fontSize=20&fontColor=ffffff&fontAlignY=72" alt="Useful software, quiet interfaces" />
-</p>
+<p align="center"><em>Focused on useful software, thoughtful interfaces, and systems that make complex workflows feel simple.</em></p>
