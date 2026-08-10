@@ -54,8 +54,8 @@
       <a href="https://github.com/mika2go/Trellis">
         <img width="100%" src="https://socialify.git.ci/mika2go/Trellis/image?description=0&font=Inter&forks=0&issues=0&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmika2go%2FMika2Go%2Fmain%2Fassets%2Flogo-trellis.png&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Trellis" />
       </a>
-      <p>A local-first ledger for your repositories: Git state, recent activity, builds, tests and optional forge attention, on the desktop and without an account or a cloud service.</p>
-      <p><code>C++20</code> <code>Qt 6</code> <code>Qt Quick</code> <code>CMake</code> <code>Local-first</code></p>
+      <p>A local-first ledger for your repositories: Git state, branches, recent commits and detected build systems, on the desktop and without an account or a network connection. Optional GitHub authorization is in progress.</p>
+      <p><code>Rust</code> <code>GTK4</code> <code>Git</code> <code>Local-first</code></p>
     </td>
   </tr>
   <tr>
