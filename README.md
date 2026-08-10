@@ -18,10 +18,26 @@
 
 ## Focus
 
-- Local-first desktop software with small native footprints and clear privacy boundaries.
-- Deep integration with Linux desktops: Wayland, Hyprland, KDE Plasma, systemd user services, hardware-accelerated media.
-- Native Windows work where it matters: Direct2D interfaces, Media Foundation, WASAPI.
-- Turning complex system behaviour into quiet interfaces with honest status and explicit platform support.
+- **Systems programming in Rust and C++, on Windows and Linux.** GPU frame
+  capture, hardware video encoding, real-time audio pipelines, and the bounded
+  in-memory ring buffers that let a recorder hold the last minute without
+  touching the disk.
+- **Native interfaces, no web stack.** Direct2D and DirectWrite on Windows,
+  Qt Quick and QML, GTK4 on Linux, Ratatui in the terminal — picked so an idle
+  application costs tens of megabytes instead of hundreds.
+- **Platform APIs where the edges are sharp.** Windows Graphics Capture, D3D11,
+  Media Foundation and WASAPI; Wayland and Hyprland, PipeWire, systemd user
+  services, and Arch packaging on the other side.
+- **Local-first by construction, not by policy.** No accounts, no telemetry, no
+  upload path — the Linux recorder ships with network access denied in its unit
+  file rather than merely unused.
+- **Measured instead of asserted.** Memory and bitrate budgets are explicit and
+  enforced, footprints are compared against real alternatives with the raw
+  numbers published, and releases are validated end to end in a disposable
+  Windows 11 VM.
+- **Boring release discipline.** Locked workspaces, `clippy -D warnings` as a
+  gate, native CI that builds and exercises the installer, and SHA-256 build
+  evidence attached to every release.
 
 ## Featured Projects
 
