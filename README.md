@@ -34,27 +34,22 @@
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/mika2go/trace">Trace</a></h3>
-      <p>A local instant replay recorder for Linux that keeps a hardware-encoded buffer in memory and saves a clip only when asked. Includes a GTK4 clip library and integrations for Hyprland, KDE Plasma, and other desktops.</p>
-      <p><code>Rust</code> <code>GTK4</code> <code>Wayland</code> <code>Hyprland</code> <code>KDE Plasma</code></p>
+    <td colspan="2" valign="top">
+      <h3><a href="https://github.com/mika2go/Wreath">Wreath</a></h3>
+      <p>Instant replay for Windows and Linux. It keeps the last half minute of gameplay hardware-encoded in memory and writes a clip only when you press the shortcut — no account, no upload, nothing leaves the machine. Native Direct2D interface on Windows, a small background service with a GTK4 clip library on Linux, and less than half the idle memory of the usual alternatives.</p>
+      <p><code>Rust</code> <code>Direct2D</code> <code>Media Foundation</code> <code>WASAPI</code> <code>GTK4</code> <code>Wayland</code></p>
     </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/mika2go/Trellis">Trellis</a></h3>
       <p>An open-source, local-first desktop repository ledger for Git state, recent activity, builds, tests, and optional forge attention—without requiring an account or cloud service.</p>
       <p><code>C++20</code> <code>Qt 6</code> <code>Qt Quick</code> <code>CMake</code> <code>Local-first</code></p>
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/mika2go/dotfiles">Hyprland + Quickshell dotfiles</a></h3>
       <p>My Arch Linux desktop environment: a QML shell with a vertical bar, Dynamic Island, launcher, dashboard, notifications, wallpaper tools, lock screen, and a cautious installer.</p>
       <p><code>QML</code> <code>Quickshell</code> <code>Hyprland</code> <code>Arch Linux</code> <code>Wayland</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/mika2go/x-queue">x-queue</a></h3>
-      <p>A minimal news-driven posting queue with mandatory human approval, source context, one-click X composer handoff, scheduled generation, and optional Claude-powered drafts.</p>
-      <p><code>Python</code> <code>FastAPI</code> <code>HTML</code> <code>GitHub Actions</code> <code>Anthropic API</code></p>
     </td>
   </tr>
 </table>
