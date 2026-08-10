@@ -45,14 +45,14 @@
   <tr>
     <td width="50%" valign="top">
       <a href="https://github.com/mika2go/PIDRA">
-        <img width="100%" src="https://socialify.git.ci/mika2go/PIDRA/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Pidra" />
+        <img width="100%" src="https://socialify.git.ci/mika2go/PIDRA/image?description=0&font=Inter&forks=0&issues=0&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmika2go%2FMika2Go%2Fmain%2Fassets%2Flogo-pidra.png&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Pidra" />
       </a>
       <p>Which desktop application is eating your memory, and what actually happened after you tried to stop it. GUI applications instead of every process on the machine, whole process trees totalled rather than a browser's root, and close-risk notes before you kill something.</p>
       <p><code>Rust</code> <code>Ratatui</code> <code>Linux</code> <code>TUI</code></p>
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/mika2go/Trellis">
-        <img width="100%" src="https://socialify.git.ci/mika2go/Trellis/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Trellis" />
+        <img width="100%" src="https://socialify.git.ci/mika2go/Trellis/image?description=0&font=Inter&forks=0&issues=0&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmika2go%2FMika2Go%2Fmain%2Fassets%2Flogo-trellis.png&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Trellis" />
       </a>
       <p>A local-first ledger for your repositories: Git state, recent activity, builds, tests and optional forge attention, on the desktop and without an account or a cloud service.</p>
       <p><code>C++20</code> <code>Qt 6</code> <code>Qt Quick</code> <code>CMake</code> <code>Local-first</code></p>
@@ -61,7 +61,7 @@
   <tr>
     <td width="50%" valign="top">
       <a href="https://github.com/mika2go/Wreath">
-        <img width="100%" src="https://socialify.git.ci/mika2go/Wreath/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Wreath" />
+        <img width="100%" src="https://socialify.git.ci/mika2go/Wreath/image?description=0&font=Inter&forks=0&issues=0&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmika2go%2FMika2Go%2Fmain%2Fassets%2Flogo-wreath.png&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Wreath" />
       </a>
       <p>The last half minute of gameplay, hardware-encoded in memory and written out only when you press the shortcut. Native on Windows, a small service plus GTK4 library on Linux, and nothing ever leaves the machine.</p>
       <p><code>Rust</code> <code>Direct2D</code> <code>Media Foundation</code> <code>WASAPI</code> <code>GTK4</code></p>
@@ -72,7 +72,7 @@
     </td>
     <td width="50%" valign="top">
       <a href="https://github.com/mika2go/dotfiles">
-        <img width="100%" src="https://socialify.git.ci/mika2go/dotfiles/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Hyprland and Quickshell dotfiles" />
+        <img width="100%" src="https://socialify.git.ci/mika2go/dotfiles/image?description=0&font=Inter&forks=0&issues=0&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmika2go%2FMika2Go%2Fmain%2Fassets%2Flogo-dotfiles.png&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Hyprland and Quickshell dotfiles" />
       </a>
       <p>My Arch desktop: a QML shell with a vertical bar, Dynamic Island, launcher, dashboard, notifications, wallpaper tools, a lock screen and a cautious installer.</p>
       <p><code>QML</code> <code>Quickshell</code> <code>Hyprland</code> <code>Arch Linux</code> <code>Wayland</code></p>
