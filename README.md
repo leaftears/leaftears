@@ -34,17 +34,22 @@
 
 <table>
   <tr>
-    <td colspan="2" valign="top">
-      <h3><a href="https://github.com/mika2go/Wreath">Wreath</a></h3>
-      <p>Instant replay for Windows and Linux. It keeps the last half minute of gameplay hardware-encoded in memory and writes a clip only when you press the shortcut — no account, no upload, nothing leaves the machine. Native Direct2D interface on Windows, a small background service with a GTK4 clip library on Linux, and less than half the idle memory of the usual alternatives.</p>
-      <p><code>Rust</code> <code>Direct2D</code> <code>Media Foundation</code> <code>WASAPI</code> <code>GTK4</code> <code>Wayland</code></p>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/mika2go/PIDRA">Pidra</a></h3>
+      <p>A keyboard-driven Linux process manager for the terminal. It answers which desktop application is eating your memory and what actually happened after you tried to stop it: GUI applications instead of every process on the machine, whole process trees totalled rather than a browser's root, a separate list for dev servers, and close-risk notes before you kill something.</p>
+      <p><code>Rust</code> <code>Ratatui</code> <code>Linux</code> <code>TUI</code></p>
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/mika2go/Trellis">Trellis</a></h3>
       <p>An open-source, local-first desktop repository ledger for Git state, recent activity, builds, tests, and optional forge attention—without requiring an account or cloud service.</p>
       <p><code>C++20</code> <code>Qt 6</code> <code>Qt Quick</code> <code>CMake</code> <code>Local-first</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/mika2go/Wreath">Wreath</a></h3>
+      <p>Instant replay for Windows and Linux. It keeps the last half minute of gameplay hardware-encoded in memory and writes a clip only when you press the shortcut — no account, no upload, nothing leaves the machine. Native Direct2D interface on Windows, a small background service with a GTK4 clip library on Linux, and less than half the idle memory of the usual alternatives.</p>
+      <p><code>Rust</code> <code>Direct2D</code> <code>Media Foundation</code> <code>WASAPI</code> <code>GTK4</code></p>
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/mika2go/dotfiles">Hyprland + Quickshell dotfiles</a></h3>
