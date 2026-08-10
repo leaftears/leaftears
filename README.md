@@ -16,17 +16,6 @@
   <img src="https://img.shields.io/badge/License-MIT-2F81F7?style=flat-square" alt="MIT licensed projects" />
 </p>
 
-<p>
-  <img align="right" src="./assets/nova-smiley-compact.gif" width="112" alt="Nova smiling mascot" />
-  I build open-source software close to the operating system: native desktop
-  applications, Linux and Wayland integrations, developer tools, and the small
-  services that connect them. Recent work spans instant replay capture,
-  repository visibility, process management, and a custom desktop shell — usually
-  in Rust, C++, Qt, QML, or Python.
-</p>
-
-<br clear="right" />
-
 ## Focus
 
 - Local-first desktop software with small native footprints and clear privacy boundaries.
@@ -39,25 +28,37 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/mika2go/PIDRA">Pidra</a></h3>
-      <p>A keyboard-driven Linux process manager for the terminal. It answers which desktop application is eating your memory and what actually happened after you tried to stop it: GUI applications instead of every process on the machine, whole process trees totalled rather than a browser's root, a separate list for dev servers, and close-risk notes before you kill something.</p>
+      <a href="https://github.com/mika2go/PIDRA">
+        <img width="100%" src="https://socialify.git.ci/mika2go/PIDRA/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Pidra" />
+      </a>
+      <p>Which desktop application is eating your memory, and what actually happened after you tried to stop it. GUI applications instead of every process on the machine, whole process trees totalled rather than a browser's root, and close-risk notes before you kill something.</p>
       <p><code>Rust</code> <code>Ratatui</code> <code>Linux</code> <code>TUI</code></p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/mika2go/Trellis">Trellis</a></h3>
-      <p>An open-source, local-first desktop repository ledger for Git state, recent activity, builds, tests, and optional forge attention—without requiring an account or cloud service.</p>
+      <a href="https://github.com/mika2go/Trellis">
+        <img width="100%" src="https://socialify.git.ci/mika2go/Trellis/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Trellis" />
+      </a>
+      <p>A local-first ledger for your repositories: Git state, recent activity, builds, tests and optional forge attention, on the desktop and without an account or a cloud service.</p>
       <p><code>C++20</code> <code>Qt 6</code> <code>Qt Quick</code> <code>CMake</code> <code>Local-first</code></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/mika2go/Wreath">Wreath</a></h3>
-      <p>Instant replay for Windows and Linux. It keeps the last half minute of gameplay hardware-encoded in memory and writes a clip only when you press the shortcut — no account, no upload, nothing leaves the machine. Native Direct2D interface on Windows, a small background service with a GTK4 clip library on Linux, and less than half the idle memory of the usual alternatives.</p>
+      <a href="https://github.com/mika2go/Wreath">
+        <img width="100%" src="https://socialify.git.ci/mika2go/Wreath/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Wreath" />
+      </a>
+      <p>The last half minute of gameplay, hardware-encoded in memory and written out only when you press the shortcut. Native on Windows, a small service plus GTK4 library on Linux, and nothing ever leaves the machine.</p>
       <p><code>Rust</code> <code>Direct2D</code> <code>Media Foundation</code> <code>WASAPI</code> <code>GTK4</code></p>
+      <p>
+        <img src="https://img.shields.io/github/v/release/mika2go/Wreath?style=flat-square&color=2F81F7&label=release" alt="Latest Wreath release" />
+        <img src="https://img.shields.io/badge/Windows%20%2B%20Linux-0d1117?style=flat-square" alt="Windows and Linux" />
+      </p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/mika2go/dotfiles">Hyprland + Quickshell dotfiles</a></h3>
-      <p>My Arch Linux desktop environment: a QML shell with a vertical bar, Dynamic Island, launcher, dashboard, notifications, wallpaper tools, lock screen, and a cautious installer.</p>
+      <a href="https://github.com/mika2go/dotfiles">
+        <img width="100%" src="https://socialify.git.ci/mika2go/dotfiles/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Hyprland and Quickshell dotfiles" />
+      </a>
+      <p>My Arch desktop: a QML shell with a vertical bar, Dynamic Island, launcher, dashboard, notifications, wallpaper tools, a lock screen and a cautious installer.</p>
       <p><code>QML</code> <code>Quickshell</code> <code>Hyprland</code> <code>Arch Linux</code> <code>Wayland</code></p>
     </td>
   </tr>
