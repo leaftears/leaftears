@@ -69,13 +69,17 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/mika2go/eddy">Eddy</a></h3>
-      <p>I contributed only the Windows version, including native platform integration and Windows installer packaging.</p>
+      <a href="https://github.com/mika2go/eddy">
+        <img width="100%" src="https://socialify.git.ci/mika2go/eddy/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Eddy" />
+      </a>
+      <p>I contributed the Windows version only: native platform integration and the Windows installer packaging.</p>
       <p><code>Windows</code> <code>C++</code> <code>Qt</code> <code>CMake</code> <code>MSI</code> <code>NSIS</code></p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/mika2go/boltsnap">BoltSnap</a></h3>
-      <p>I contributed only the Windows version of the fast screenshot and annotation workflow.</p>
+      <a href="https://github.com/mika2go/boltsnap">
+        <img width="100%" src="https://socialify.git.ci/mika2go/boltsnap/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="BoltSnap" />
+      </a>
+      <p>I contributed the Windows version only of this fast screenshot and annotation workflow.</p>
       <p><code>Windows</code> <code>Rust</code> <code>Screen Capture</code></p>
     </td>
   </tr>
