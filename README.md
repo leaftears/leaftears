@@ -1,113 +1,54 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,60:1f3d68,100:2F81F7&height=190&section=header&text=Mika&fontSize=68&fontColor=ffffff&fontAlignY=34&desc=local-first%20desktop%20software&descAlignY=56&descSize=17" alt="Mika" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,60:1f3d68,100:2F81F7&height=140&section=header&text=Mika&fontSize=52&fontColor=ffffff&fontAlignY=34&desc=local-first%20desktop%20software&descAlignY=58&descSize=15" alt="Mika" />
 </p>
 
 <p align="center">
   <a href="https://github.com/mika2go?tab=repositories">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=21&pause=1200&color=2F81F7&center=true&vCenter=true&width=600&height=42&lines=Native+desktop+tools+that+stay+out+of+the+way;Linux+and+Windows+internals;Small+footprints+and+honest+status" alt="Native desktop tools, Linux and Windows internals, small footprints" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1400&color=2F81F7&center=true&vCenter=true&width=520&height=34&lines=Native+desktop+tools+that+stay+out+of+the+way;Rust+and+C%2B%2B+on+Linux+and+Windows" alt="Native desktop tools in Rust and C++" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=mika2go&label=Profile+Views&color=2F81F7&style=flat-square" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=mika2go&label=Views&color=2F81F7&style=flat-square" alt="Profile views" />
   <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
   <img src="https://img.shields.io/badge/Linux-0d1117?style=flat-square&logo=linux&logoColor=FCC624" alt="Linux" />
   <img src="https://img.shields.io/badge/Wayland-0d1117?style=flat-square&logo=wayland&logoColor=white" alt="Wayland" />
-  <img src="https://img.shields.io/badge/License-MIT-2F81F7?style=flat-square" alt="MIT licensed projects" />
+  <img src="https://img.shields.io/badge/License-MIT-2F81F7?style=flat-square" alt="MIT" />
 </p>
 
 ## Focus
 
-- **Systems programming in Rust and C++, on Windows and Linux.** GPU frame
-  capture, hardware video encoding, real-time audio pipelines, and the bounded
-  in-memory ring buffers that let a recorder hold the last minute without
-  touching the disk.
-- **Native interfaces, no web stack.** Direct2D and DirectWrite on Windows,
-  Qt Quick and QML, GTK4 on Linux, Ratatui in the terminal — picked so an idle
-  application costs tens of megabytes instead of hundreds.
-- **Platform APIs where the edges are sharp.** Windows Graphics Capture, D3D11,
-  Media Foundation and WASAPI; Wayland and Hyprland, PipeWire, systemd user
-  services, and Arch packaging on the other side.
-- **Local-first by construction, not by policy.** No accounts, no telemetry, no
-  upload path — the Linux recorder ships with network access denied in its unit
-  file rather than merely unused.
-- **Measured instead of asserted.** Memory and bitrate budgets are explicit and
-  enforced, footprints are compared against real alternatives with the raw
-  numbers published, and releases are validated end to end in a disposable
-  Windows 11 VM.
-- **Boring release discipline.** Locked workspaces, `clippy -D warnings` as a
-  gate, native CI that builds and exercises the installer, and SHA-256 build
-  evidence attached to every release.
-
-## Featured Projects
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/mika2go/PIDRA">
-        <img width="100%" src="https://socialify.git.ci/mika2go/PIDRA/image?description=0&font=Inter&forks=0&issues=0&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmika2go%2FMika2Go%2Fmain%2Fassets%2Flogo-pidra.png&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Pidra" />
-      </a>
-      <p>Which desktop application is eating your memory, and what actually happened after you tried to stop it. GUI applications instead of every process on the machine, whole process trees totalled rather than a browser's root, and close-risk notes before you kill something.</p>
-      <p><code>Rust</code> <code>Ratatui</code> <code>Linux</code> <code>TUI</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/mika2go/Trellis">
-        <img width="100%" src="https://socialify.git.ci/mika2go/Trellis/image?description=0&font=Inter&forks=0&issues=0&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmika2go%2FMika2Go%2Fmain%2Fassets%2Flogo-trellis.png&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Trellis" />
-      </a>
-      <p>A local-first ledger for your repositories: Git state, branches, recent commits and detected build systems, on the desktop and without an account or a network connection. Optional GitHub authorization is in progress.</p>
-      <p><code>Rust</code> <code>GTK4</code> <code>Git</code> <code>Local-first</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/mika2go/Wreath">
-        <img width="100%" src="https://socialify.git.ci/mika2go/Wreath/image?description=0&font=Inter&forks=0&issues=0&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmika2go%2FMika2Go%2Fmain%2Fassets%2Flogo-wreath.png&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Wreath" />
-      </a>
-      <p>The last half minute of gameplay, hardware-encoded in memory and written out only when you press the shortcut. Native on Windows, a small service plus GTK4 library on Linux, and nothing ever leaves the machine.</p>
-      <p><code>Rust</code> <code>Direct2D</code> <code>Media Foundation</code> <code>WASAPI</code> <code>GTK4</code></p>
-      <p>
-        <img src="https://img.shields.io/github/v/release/mika2go/Wreath?style=flat-square&color=2F81F7&label=release" alt="Latest Wreath release" />
-        <img src="https://img.shields.io/badge/Windows%20%2B%20Linux-0d1117?style=flat-square" alt="Windows and Linux" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/mika2go/dotfiles">
-        <img width="100%" src="https://socialify.git.ci/mika2go/dotfiles/image?description=0&font=Inter&forks=0&issues=0&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmika2go%2FMika2Go%2Fmain%2Fassets%2Flogo-dotfiles.png&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Hyprland and Quickshell dotfiles" />
-      </a>
-      <p>My Arch desktop: a QML shell with a vertical bar, Dynamic Island, launcher, dashboard, notifications, wallpaper tools, a lock screen and a cautious installer.</p>
-      <p><code>QML</code> <code>Quickshell</code> <code>Hyprland</code> <code>Arch Linux</code> <code>Wayland</code></p>
-    </td>
-  </tr>
-</table>
-
-## Open Source Contributions
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/mika2go/eddy">
-        <img width="100%" src="https://socialify.git.ci/mika2go/eddy/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="Eddy" />
-      </a>
-      <p>I contributed the Windows version only: native platform integration and the Windows installer packaging.</p>
-      <p><code>Windows</code> <code>C++</code> <code>Qt</code> <code>CMake</code> <code>MSI</code> <code>NSIS</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/mika2go/boltsnap">
-        <img width="100%" src="https://socialify.git.ci/mika2go/boltsnap/image?description=0&font=Inter&forks=0&issues=0&language=1&name=1&owner=1&pattern=Circuit+Board&pulls=0&stargazers=0&theme=Dark" alt="BoltSnap" />
-      </a>
-      <p>I contributed the Windows version only of this fast screenshot and annotation workflow.</p>
-      <p><code>Windows</code> <code>Rust</code> <code>Screen Capture</code></p>
-    </td>
-  </tr>
-</table>
+- Systems programming in **Rust** and **C++** — frame capture, hardware encoding, real-time audio.
+- Native interfaces, no web stack: Qt Quick, GTK4, Direct2D, Ratatui.
+- Local-first by construction — no accounts, no telemetry, no upload path.
+- Budgets measured and published, not asserted.
 
 ## Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=rust,tauri,cpp,qt,cs,dotnet,python,ts,svelte,react,tailwind,nodejs,c,lua,sqlite,supabase,linux,bash&perline=9" alt="Rust, Tauri, C++, Qt, C sharp, .NET, Python, TypeScript, Svelte, React, Tailwind CSS, Node.js, C, Lua, SQLite, Supabase, Linux, Bash" />
+  <img src="https://skillicons.dev/icons?i=rust,tauri,cpp,qt,cs,dotnet,python,ts,svelte,react,nodejs,c,lua,sqlite,linux,bash&perline=16" alt="Rust, Tauri, C++, Qt, C#, .NET, Python, TypeScript, Svelte, React, Node.js, C, Lua, SQLite, Linux, Bash" />
 </p>
 
+## Projects
+
+<p align="left">
+  <a href="https://github.com/mika2go/Wreath"><img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/pin-wreath.png" alt="Wreath" /></a>
+  <a href="https://github.com/mika2go/PIDRA"><img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/pin-pidra.png" alt="PIDRA" /></a>
+  <a href="https://github.com/mika2go/Trellis"><img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/pin-trellis.png" alt="Trellis" /></a>
+  <a href="https://github.com/mika2go/solis-browser"><img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/pin-solis-browser.png" alt="solis-browser" /></a>
+  <a href="https://github.com/mika2go/dotfiles"><img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/pin-dotfiles.png" alt="dotfiles" /></a>
+  <a href="https://github.com/mika2go/Crosshair-Hype"><img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/pin-crosshair-hype.png" alt="Crosshair-Hype" /></a>
+</p>
+
+## Contributed
+
+<p align="left">
+  <a href="https://github.com/drvcvt/eddy"><img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/pin-eddy.png" alt="eddy" /></a>
+  <a href="https://github.com/drvcvt/boltsnap"><img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/pin-boltsnap.png" alt="boltsnap" /></a>
+</p>
+
+<p align="left"><sub>Windows side only on both — native platform integration and installer packaging.</sub></p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2F81F7,40:1f3d68,100:0d1117&height=120&section=footer&text=useful%20software%20%C2%B7%20quiet%20interfaces&fontSize=20&fontColor=ffffff&fontAlignY=72" alt="Useful software, quiet interfaces" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2F81F7,40:1f3d68,100:0d1117&height=90&section=footer" alt="" />
 </p>

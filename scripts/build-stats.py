@@ -326,6 +326,88 @@ def render_languages(rows: list[tuple[str, int, str]], repos: int, private: int)
     return "\n".join(parts) + "\n"
 
 
+
+PIN_QUERY = """
+query($owner: String!, $name: String!) {
+  repository(owner: $owner, name: $name) {
+    name description stargazerCount forkCount
+    primaryLanguage { name color }
+  }
+}
+"""
+
+CARD_W, CARD_H = 278, 116
+
+
+def wrap(text: str, width: int, lines: int) -> list[str]:
+    out, current = [], ""
+    for word in text.split():
+        candidate = f"{current} {word}".strip()
+        if len(candidate) > width and current:
+            out.append(current)
+            current = word
+            if len(out) == lines:
+                break
+        else:
+            current = candidate
+    if len(out) < lines and current:
+        out.append(current)
+    if len(out) == lines and current not in out:
+        out[-1] = out[-1][: width - 1].rstrip() + "…"
+    return out
+
+
+def render_pin(repo: dict) -> str:
+    """A repository card in the shape github-readme-stats draws, but ours.
+
+    The hosted instance answers 503 more often than not, and a profile that
+    depends on someone else's free tier is a profile with broken images.
+    """
+    language = repo.get("primaryLanguage") or {}
+    body = wrap(repo.get("description") or "", 37, 3)
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_W}" height="{CARD_H}" '
+        f'viewBox="0 0 {CARD_W} {CARD_H}" font-family="JetBrains Mono, ui-monospace, monospace">',
+        '<style>.n{font-size:13px;font-weight:600;fill:#2f81f7}'
+        '.b{font-size:10.5px;fill:#8b949e}.s{font-size:10.5px;fill:#8b949e}</style>',
+        f'<rect width="{CARD_W}" height="{CARD_H}" rx="8" fill="#0d1117" stroke="#21262d"/>',
+        # The little book glyph github-readme-stats uses, drawn rather than
+        # embedded so the card has no external references at all.
+        '<path d="M18 22h9a2 2 0 0 1 2 2v11H20a2 2 0 0 0-2 2V22z" fill="none" '
+        'stroke="#58a6ff" stroke-width="1.4"/>',
+        f'<text x="36" y="33" class="n">{repo["name"]}</text>',
+    ]
+    for index, line in enumerate(body):
+        parts.append(f'<text x="18" y="{55 + index * 15}" class="b">{escape(line)}</text>')
+
+    footer = CARD_H - 16
+    x = 18
+    if language.get("name"):
+        parts.append(f'<circle cx="{x + 5}" cy="{footer - 4}" r="5" '
+                     f'fill="{language.get("color") or "#8b949e"}"/>')
+        parts.append(f'<text x="{x + 16}" y="{footer}" class="s">{language["name"]}</text>')
+        x += 26 + len(language["name"]) * 6.6
+    for glyph, value in (("★", repo["stargazerCount"]), ("⑂", repo["forkCount"])):
+        if value:
+            parts.append(f'<text x="{x:.0f}" y="{footer}" class="s">{glyph} {value}</text>')
+            x += 34
+    parts.append("</svg>")
+    return "\n".join(parts) + "\n"
+
+
+def escape(text: str) -> str:
+    return (text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+
+
+def pins(specs: list[tuple[str, str]]) -> dict[str, str]:
+    out = {}
+    for owner, name in specs:
+        repo = post(PIN_QUERY, {"owner": owner, "name": name})["repository"]
+        out[f"pin-{name.lower()}"] = render_pin(repo)
+    return out
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--login", default="mika2go")
@@ -338,10 +420,17 @@ def main() -> int:
 
     user = fetch(args.login)
     days = flatten(user)
-    for name, svg in (
-        ("stats", render(args.login, user, days)),
-        ("languages", render_languages(*languages())),
-    ):
+    cards = {
+        "stats": render(args.login, user, days),
+        "languages": render_languages(*languages()),
+    }
+    cards.update(pins([
+        ("mika2go", "Wreath"), ("mika2go", "PIDRA"), ("mika2go", "Trellis"),
+        ("mika2go", "solis-browser"), ("mika2go", "dotfiles"),
+        ("mika2go", "Crosshair-Hype"),
+        ("drvcvt", "eddy"), ("drvcvt", "boltsnap"),
+    ]))
+    for name, svg in cards.items():
         target = out / f"{name}.svg"
         if target.exists() and target.read_text(encoding="utf-8") == svg:
             print(f"{name}: unchanged")

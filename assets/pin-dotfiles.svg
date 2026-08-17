@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="278" height="116" viewBox="0 0 278 116" font-family="JetBrains Mono, ui-monospace, monospace">
+<style>.n{font-size:13px;font-weight:600;fill:#2f81f7}.b{font-size:10.5px;fill:#8b949e}.s{font-size:10.5px;fill:#8b949e}</style>
+<rect width="278" height="116" rx="8" fill="#0d1117" stroke="#21262d"/>
+<path d="M18 22h9a2 2 0 0 1 2 2v11H20a2 2 0 0 0-2 2V22z" fill="none" stroke="#58a6ff" stroke-width="1.4"/>
+<text x="36" y="33" class="n">dotfiles</text>
+<text x="18" y="55" class="b">Hyprland and Quickshell dotfiles with</text>
+<text x="18" y="70" class="b">a monochrome vertical shell, Dynamic</text>
+<text x="18" y="85" class="b">Island and installer</text>
+<circle cx="23" cy="96" r="5" fill="#44a51c"/>
+<text x="34" y="100" class="s">QML</text>
+</svg>
