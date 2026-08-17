@@ -1,19 +1,15 @@
+<h1 align="center">Mika</h1>
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,60:1f3d68,100:2F81F7&height=140&section=header&text=Mika&fontSize=52&fontColor=ffffff&fontAlignY=34&desc=local-first%20desktop%20software&descAlignY=58&descSize=15" alt="Mika" />
+  Local-first desktop software &nbsp;·&nbsp; Rust and C++ on Linux and Windows
 </p>
 
 <p align="center">
-  <a href="https://github.com/mika2go?tab=repositories">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1400&color=2F81F7&center=true&vCenter=true&width=520&height=34&lines=Native+desktop+tools+that+stay+out+of+the+way;Rust+and+C%2B%2B+on+Linux+and+Windows" alt="Native desktop tools in Rust and C++" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=mika2go&label=Views&color=2F81F7&style=flat-square" alt="Profile views" />
   <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+  <img src="https://img.shields.io/badge/C++-004482?style=flat-square&logo=cplusplus&logoColor=white" alt="C++" />
   <img src="https://img.shields.io/badge/Linux-0d1117?style=flat-square&logo=linux&logoColor=FCC624" alt="Linux" />
   <img src="https://img.shields.io/badge/Wayland-0d1117?style=flat-square&logo=wayland&logoColor=white" alt="Wayland" />
-  <img src="https://img.shields.io/badge/License-MIT-2F81F7?style=flat-square" alt="MIT" />
+  <img src="https://img.shields.io/badge/MIT-2F81F7?style=flat-square" alt="MIT" />
 </p>
 
 ## Focus
@@ -48,7 +44,3 @@
 </p>
 
 <p align="left"><sub>Windows side only on both — native platform integration and installer packaging.</sub></p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2F81F7,40:1f3d68,100:0d1117&height=90&section=footer" alt="" />
-</p>
