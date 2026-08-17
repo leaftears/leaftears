@@ -14,13 +14,8 @@
 
 ## Focus
 
-<p align="left">
-  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-systems.png" alt="systems" />
-  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-desktop-ui.png" alt="desktop ui" />
-  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-linux.png" alt="linux" />
-  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-windows.png" alt="windows" />
-  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-digging.png" alt="digging" />
-  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-shipping.png" alt="shipping" />
+<p align="center">
+  <img width="760" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/focus.png" alt="Systems, desktop UI, Linux, Windows, digging, shipping" />
 </p>
 
 ## Stack

@@ -402,35 +402,39 @@ def escape(text: str) -> str:
 
 
 SKILLS = [
-    ("Systems", ["Frame capture", "Hardware encoding",
-                 "Audio pipelines", "Memory held to a budget"]),
-    ("Desktop UI", ["Qt Quick · QML", "GTK4 · WPF",
-                    "Tauri + Svelte", "Ratatui"]),
-    ("Linux", ["Wayland · PipeWire", "inotify · systemd units",
-               "Arch packaging"]),
-    ("Windows", ["Graphics Capture", "D3D11 · Media Foundation", "WASAPI"]),
-    ("Digging", ["Binary formats", "Patching packaged apps",
-                 "Tracing real behaviour"]),
-    ("Shipping", ["Warnings as errors", "Native CI",
-                  "MSI · NSIS · AppImage · AUR"]),
+    ("Systems", "Frame capture · Hardware encoding · Audio pipelines"),
+    ("Desktop UI", "Qt Quick · QML · GTK4 · WPF · Tauri · Ratatui"),
+    ("Linux", "Wayland · PipeWire · inotify · systemd · Arch packaging"),
+    ("Windows", "Graphics Capture · D3D11 · Media Foundation · WASAPI"),
+    ("Digging", "Binary formats · Patching packaged apps · Tracing"),
+    ("Shipping", "Warnings as errors · Native CI · MSI · AppImage · AUR"),
 ]
 
 
-def render_skill(title: str, items: list[str]) -> str:
-    """Same footprint as a repository card, so the two grids line up."""
+def render_focus() -> str:
+    """One quiet block: label on the left, a rule, the detail on the right.
+
+    Deliberately not the repository-card shape. Six of those in a grid above
+    six more of the same size read as one undifferentiated wall.
+    """
+    width, row_h, pad = 760, 40, 18
+    height = pad * 2 + row_h * len(SKILLS)
+    split = 168
+
     parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_W}" height="{CARD_H}" '
-        f'viewBox="0 0 {CARD_W} {CARD_H}" font-family="JetBrains Mono, ui-monospace, monospace">',
-        '<style>.h{font-size:12.5px;font-weight:600;fill:#2f81f7}'
-        '.i{font-size:10.5px;fill:#8b949e}</style>',
-        f'<rect width="{CARD_W}" height="{CARD_H}" rx="8" fill="#0d1117" stroke="#21262d"/>',
-        # A short rule instead of an icon: the repository cards carry a glyph,
-        # these do not need one and the page is quieter without it.
-        '<rect x="18" y="22" width="18" height="2" rx="1" fill="#2f81f7"/>',
-        f'<text x="18" y="44" class="h">{escape(title)}</text>',
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}" font-family="JetBrains Mono, ui-monospace, monospace">',
+        '<style>.k{font-size:12px;font-weight:600;fill:#2f81f7}'
+        '.v{font-size:11.5px;fill:#8b949e}</style>',
+        f'<rect width="{width}" height="{height}" rx="10" fill="#0d1117" stroke="#21262d"/>',
     ]
-    for index, item in enumerate(items[:4]):
-        parts.append(f'<text x="18" y="{62 + index * 14}" class="i">{escape(item)}</text>')
+    for index, (label, detail) in enumerate(SKILLS):
+        top = pad + index * row_h
+        mid = top + row_h / 2 + 4
+        parts.append(f'<text x="28" y="{mid:.0f}" class="k">{escape(label)}</text>')
+        parts.append(f'<line x1="{split}" y1="{top + 8}" x2="{split}" y2="{top + row_h - 8}" '
+                     f'stroke="#21262d"/>')
+        parts.append(f'<text x="{split + 22}" y="{mid:.0f}" class="v">{escape(detail)}</text>')
     parts.append("</svg>")
     return "\n".join(parts) + "\n"
 
@@ -459,10 +463,7 @@ def main() -> int:
         "stats": render(args.login, user, days),
         "languages": render_languages(*languages()),
     }
-    cards.update({
-        f"skill-{title.lower().replace(' ', '-')}": render_skill(title, items)
-        for title, items in SKILLS
-    })
+    cards["focus"] = render_focus()
     cards.update(pins([
         ("mika2go", "Wreath"), ("mika2go", "PIDRA"), ("mika2go", "Trellis"),
         ("mika2go", "solis-browser"), ("mika2go", "dotfiles"),

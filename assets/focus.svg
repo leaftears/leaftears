@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="276" viewBox="0 0 760 276" font-family="JetBrains Mono, ui-monospace, monospace">
+<style>.k{font-size:12px;font-weight:600;fill:#2f81f7}.v{font-size:11.5px;fill:#8b949e}</style>
+<rect width="760" height="276" rx="10" fill="#0d1117" stroke="#21262d"/>
+<text x="28" y="42" class="k">Systems</text>
+<line x1="168" y1="26" x2="168" y2="50" stroke="#21262d"/>
+<text x="190" y="42" class="v">Frame capture · Hardware encoding · Audio pipelines</text>
+<text x="28" y="82" class="k">Desktop UI</text>
+<line x1="168" y1="66" x2="168" y2="90" stroke="#21262d"/>
+<text x="190" y="82" class="v">Qt Quick · QML · GTK4 · WPF · Tauri · Ratatui</text>
+<text x="28" y="122" class="k">Linux</text>
+<line x1="168" y1="106" x2="168" y2="130" stroke="#21262d"/>
+<text x="190" y="122" class="v">Wayland · PipeWire · inotify · systemd · Arch packaging</text>
+<text x="28" y="162" class="k">Windows</text>
+<line x1="168" y1="146" x2="168" y2="170" stroke="#21262d"/>
+<text x="190" y="162" class="v">Graphics Capture · D3D11 · Media Foundation · WASAPI</text>
+<text x="28" y="202" class="k">Digging</text>
+<line x1="168" y1="186" x2="168" y2="210" stroke="#21262d"/>
+<text x="190" y="202" class="v">Binary formats · Patching packaged apps · Tracing</text>
+<text x="28" y="242" class="k">Shipping</text>
+<line x1="168" y1="226" x2="168" y2="250" stroke="#21262d"/>
+<text x="190" y="242" class="v">Warnings as errors · Native CI · MSI · AppImage · AUR</text>
+</svg>
