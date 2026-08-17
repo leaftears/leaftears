@@ -14,12 +14,17 @@
 
 ## Focus
 
-**Systems** — Frame capture · Hardware encoding · Audio pipelines  
-**Desktop UI** — Qt Quick · QML · GTK4 · WPF · Tauri · Ratatui  
-**Linux** — Wayland · PipeWire · inotify · systemd · Arch packaging  
-**Windows** — Graphics Capture · D3D11 · Media Foundation · WASAPI  
-**Digging** — Binary formats · Patching packaged apps · Tracing  
-**Shipping** — Warnings as errors · Native CI · MSI · AppImage · AUR
+<p align="center"><b>Systems</b> &nbsp;—&nbsp; Frame capture · Hardware encoding · Audio pipelines</p>
+
+<p align="center"><b>Desktop UI</b> &nbsp;—&nbsp; Qt Quick · QML · GTK4 · WPF · Tauri · Ratatui</p>
+
+<p align="center"><b>Linux</b> &nbsp;—&nbsp; Wayland · PipeWire · inotify · systemd · Arch packaging</p>
+
+<p align="center"><b>Windows</b> &nbsp;—&nbsp; Graphics Capture · D3D11 · Media Foundation · WASAPI</p>
+
+<p align="center"><b>Digging</b> &nbsp;—&nbsp; Binary formats · Patching packaged apps · Tracing</p>
+
+<p align="center"><b>Shipping</b> &nbsp;—&nbsp; Warnings as errors · Native CI · MSI · AppImage · AUR</p>
 
 ## Stack
 
