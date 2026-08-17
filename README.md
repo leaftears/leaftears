@@ -104,13 +104,25 @@
 ## Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=rust,cpp,qt,cs,dotnet,python,fastapi,ts,react,tailwind,nodejs,tauri,supabase,linux&perline=14" alt="Rust, C++, Qt, C sharp, .NET, Python, FastAPI, TypeScript, React, Tailwind CSS, Node.js, Tauri, Supabase, Linux" />
+  <img src="https://skillicons.dev/icons?i=rust,tauri,cpp,qt,cs,dotnet,python,ts,svelte,react,tailwind,nodejs,c,lua,sqlite,supabase,linux,bash&perline=9" alt="Rust, Tauri, C++, Qt, C sharp, .NET, Python, TypeScript, Svelte, React, Tailwind CSS, Node.js, C, Lua, SQLite, Supabase, Linux, Bash" />
 </p>
 
 ## GitHub in Numbers
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mika2go&theme=github_dark" alt="Profile summary" />
+  <img src="./assets/stats.svg" alt="Contribution activity over the last year" width="760" />
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mika2go/Mika2Go/output/snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mika2go/Mika2Go/output/snake-light.svg" />
+    <img src="https://raw.githubusercontent.com/mika2go/Mika2Go/output/snake-dark.svg" alt="A snake eating the contribution grid" width="760" />
+  </picture>
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=mika2go&theme=discord&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6&title=Commits,Repositories,Followers,Stars,Experience,Issues,PullRequest" alt="Profile trophies" />
 </p>
 
 <p align="center">
@@ -119,16 +131,16 @@
 </p>
 
 <p align="center">
-  <img src="./assets/stats.svg" alt="Contribution activity over the last year, private repositories included" width="760" />
-</p>
-
-<p align="center">
-  <sub>Rebuilt daily by <a href="scripts/build-stats.py">scripts/build-stats.py</a> — the hosted streak cards
-  query GitHub with their own token and therefore only ever see public repositories.</sub>
-</p>
-
-<p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=mika2go&days=31&bg_color=00000000&color=C9D1D9&line=2F81F7&point=2F81F7&area_color=2F81F7&area=true&hide_border=true&hide_title=false&custom_title=Commits%20over%20the%20last%2031%20days" alt="Commit activity over the last 31 days" />
+</p>
+
+<p align="center">
+  <sub>
+    The heatmap is rendered from my own contribution calendar by
+    <a href="scripts/build-stats.py">scripts/build-stats.py</a> and refreshed daily.
+    The two language cards read public repositories only, so they undercount —
+    that is a limit of every hosted card, not of the data.
+  </sub>
 </p>
 
 <p align="center">

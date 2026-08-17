@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 """Render assets/stats.svg from the GitHub contribution calendar.
 
-The hosted streak cards query GitHub with their own token, so they only ever
-see public contributions. This one runs with a token of ours, which means
-private repositories are included — that is the whole reason it exists.
+Draws the contribution calendar as a heatmap with both streaks. The hosted
+cards do roughly this, but none of them show the tooltip counts or the
+busiest-day line, and having it in the repository means it cannot break
+because someone else's free tier ran out.
 
-Needs a token with `read:user`. Locally it falls back to `gh auth token`.
+Any token works, including the GITHUB_TOKEN that Actions provides — the
+calendar is public as long as "Include private contributions on my profile"
+is enabled in account settings. Without that setting no token short of a
+personal one can see private activity, and the numbers will be small.
+Locally it falls back to `gh auth token`.
 """
 
 from __future__ import annotations

@@ -1,9 +1,9 @@
 name: stats
 
-# Rebuilds assets/stats.svg. The point of doing this ourselves rather than
-# using a hosted card is the token: GITHUB_TOKEN cannot read the contribution
-# calendar, and third-party cards use their own, so both only ever see public
-# repositories. STATS_TOKEN is a PAT with read:user and nothing else.
+# Rebuilds assets/stats.svg from the contribution calendar. Uses the
+# GITHUB_TOKEN that Actions hands out, so there is nothing to configure —
+# but the calendar only includes private repositories if
+# "Include private contributions on my profile" is on in account settings.
 
 on:
   schedule:
@@ -34,13 +34,8 @@ jobs:
 
       - name: Render the card
         env:
-          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
-        run: |
-          if [ -z "$STATS_TOKEN" ]; then
-            echo "::error::STATS_TOKEN is not set — see scripts/build-stats.py"
-            exit 1
-          fi
-          python3 scripts/build-stats.py --login "${{ github.repository_owner }}"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build-stats.py --login "${{ github.repository_owner }}"
 
       - name: Commit if it changed
         run: |
