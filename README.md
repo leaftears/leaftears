@@ -12,19 +12,6 @@
   <img src="https://img.shields.io/badge/MIT-2F81F7?style=flat-square" alt="MIT" />
 </p>
 
-## Focus
-
-<p align="center"><b>Systems</b> &nbsp;—&nbsp; Frame capture · Hardware encoding · Audio pipelines</p>
-
-<p align="center"><b>Desktop UI</b> &nbsp;—&nbsp; Qt Quick · QML · GTK4 · WPF · Tauri · Ratatui</p>
-
-<p align="center"><b>Linux</b> &nbsp;—&nbsp; Wayland · PipeWire · inotify · systemd · Arch packaging</p>
-
-<p align="center"><b>Windows</b> &nbsp;—&nbsp; Graphics Capture · D3D11 · Media Foundation · WASAPI</p>
-
-<p align="center"><b>Digging</b> &nbsp;—&nbsp; Binary formats · Patching packaged apps · Tracing</p>
-
-<p align="center"><b>Shipping</b> &nbsp;—&nbsp; Warnings as errors · Native CI · MSI · AppImage · AUR</p>
 
 ## Stack
 
