@@ -45,6 +45,22 @@ query($login: String!) {
 }
 """
 
+LANG_QUERY = """
+query {
+  viewer {
+    repositories(first: 100, ownerAffiliations: [OWNER], isFork: false) {
+      totalCount
+      nodes {
+        isPrivate
+        languages(first: 12, orderBy: {field: SIZE, direction: DESC}) {
+          edges { size node { name color } }
+        }
+      }
+    }
+  }
+}
+"""
+
 # GitHub's own palette, so the card does not fight the profile page.
 EMPTY = "#161b22"
 LEVELS = ["#0e2f52", "#15477d", "#1c5fa8", "#2f81f7"]
@@ -72,7 +88,11 @@ def token() -> str:
 
 
 def fetch(login: str) -> dict:
-    payload = json.dumps({"query": QUERY, "variables": {"login": login}}).encode()
+    return post(QUERY, {"login": login})["user"]
+
+
+def post(query: str, variables: dict | None = None) -> dict:
+    payload = json.dumps({"query": query, "variables": variables or {}}).encode()
 
     request = urllib.request.Request(
         API,
@@ -104,7 +124,7 @@ def fetch(login: str) -> dict:
 
     if "errors" in body:
         sys.exit(f"graphql: {body['errors']}")
-    return body["data"]["user"]
+    return body["data"]
 
 
 def flatten(user: dict) -> list[tuple[dt.date, int]]:
@@ -236,24 +256,114 @@ def render(login: str, user: dict, days: list[tuple[dt.date, int]]) -> str:
     return "\n".join(parts) + "\n"
 
 
+def languages() -> tuple[list[tuple[str, int, str]], int, int]:
+    """Bytes per language across every repository the token can see.
+
+    The hosted language cards read the public REST endpoint, so they miss
+    private repositories entirely. This one does not, which is the only
+    reason to draw it ourselves.
+    """
+    data = post(LANG_QUERY)["viewer"]["repositories"]
+    totals: dict[str, int] = {}
+    colours: dict[str, str] = {}
+    private = 0
+    for repo in data["nodes"]:
+        private += 1 if repo["isPrivate"] else 0
+        for edge in repo["languages"]["edges"]:
+            name = edge["node"]["name"]
+            totals[name] = totals.get(name, 0) + edge["size"]
+            colours[name] = edge["node"]["color"] or "#8b949e"
+
+    ranked = sorted(totals.items(), key=lambda kv: -kv[1])
+    top = [(name, size, colours[name]) for name, size in ranked[:8]]
+    if len(ranked) > 8:
+        rest = sum(size for _, size in ranked[8:])
+        top.append(("Other", rest, "#6e7681"))
+    return top, data["totalCount"], private
+
+
+def render_languages(rows: list[tuple[str, int, str]], repos: int, private: int) -> str:
+    width, bar_y, bar_h = 760, 64, 14
+    total = sum(size for _, size, _ in rows) or 1
+    height = bar_y + bar_h + 30 + ((len(rows) + 2) // 3) * 22
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}" font-family="JetBrains Mono, ui-monospace, monospace">',
+        '<style>.t{font-size:13px;fill:#c9d1d9;font-weight:600}'
+        '.s{font-size:10px;fill:#6e7681}.k{font-size:11px;fill:#c9d1d9}'
+        '.p{font-size:11px;fill:#8b949e}</style>',
+        f'<text x="24" y="30" class="t">Languages by bytes written</text>',
+        f'<text x="{width - 24}" y="30" class="s" text-anchor="end">'
+        f'{repos} repositories · {private} private · all counted</text>',
+    ]
+
+    # One rounded bar built from clipped segments, so the ends stay round
+    # without each segment needing its own radius.
+    parts.append(f'<clipPath id="bar"><rect x="24" y="{bar_y}" width="{width - 48}" '
+                 f'height="{bar_h}" rx="7"/></clipPath>')
+    parts.append('<g clip-path="url(#bar)">')
+    offset = 24.0
+    span = width - 48
+    for _, size, colour in rows:
+        chunk = span * size / total
+        parts.append(f'<rect x="{offset:.2f}" y="{bar_y}" width="{chunk + 0.6:.2f}" '
+                     f'height="{bar_h}" fill="{colour}"/>')
+        offset += chunk
+    parts.append("</g>")
+
+    for index, (name, size, colour) in enumerate(rows):
+        column, row = index % 3, index // 3
+        x = 24 + column * ((width - 48) // 3)
+        y = bar_y + bar_h + 32 + row * 22
+        share = 100 * size / total
+        parts.append(f'<circle cx="{x + 5}" cy="{y - 4}" r="5" fill="{colour}"/>')
+        parts.append(f'<text x="{x + 18}" y="{y}" class="k">{name}</text>')
+        parts.append(f'<text x="{x + 18 + len(name) * 7 + 10}" y="{y}" class="p">'
+                     f'{share:.1f}%</text>')
+
+    parts.append("</svg>")
+    return "\n".join(parts) + "\n"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--login", default="mika2go")
-    parser.add_argument("--out", default="assets/stats.svg")
+    parser.add_argument("--out-dir", default="assets")
     args = parser.parse_args()
+
+    out = Path(args.out_dir)
+    out.mkdir(parents=True, exist_ok=True)
+    written = []
 
     user = fetch(args.login)
     days = flatten(user)
-    svg = render(args.login, user, days)
+    for name, svg in (
+        ("stats", render(args.login, user, days)),
+        ("languages", render_languages(*languages())),
+    ):
+        target = out / f"{name}.svg"
+        if target.exists() and target.read_text(encoding="utf-8") == svg:
+            print(f"{name}: unchanged")
+            continue
+        target.write_text(svg, encoding="utf-8")
+        written.append(name)
+        print(f"{name}: wrote {target}")
 
-    out = Path(args.out)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    previous = out.read_text(encoding="utf-8") if out.exists() else ""
-    if previous == svg:
-        print("unchanged")
-        return 0
-    out.write_text(svg, encoding="utf-8")
-    print(f"wrote {out} ({len(svg)} bytes, {len(days)} days)")
+    # GitHub proxies README images through camo, and SVG served from a
+    # repository comes back as text/plain often enough that the image simply
+    # does not render. PNG always does, so that is what the README points at.
+    for name in written:
+        source, png = out / f"{name}.svg", out / f"{name}.png"
+        try:
+            subprocess.run(
+                ["rsvg-convert", "-b", "#0d1117", "-z", "2", "-o", str(png), str(source)],
+                check=True,
+            )
+            print(f"{name}: wrote {png}")
+        except (OSError, subprocess.CalledProcessError) as err:
+            sys.exit(f"could not rasterise {source}: {err}")
+
     return 0
 
 
