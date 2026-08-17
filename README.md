@@ -119,7 +119,12 @@
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=mika2go&theme=transparent&hide_border=true&border_radius=12&date_format=M%20j%5B%2C%20Y%5D&ring=2F81F7&fire=2F81F7&currStreakLabel=2F81F7&sideLabels=8B949E&dates=6E7681&sideNums=C9D1D9&currStreakNum=C9D1D9&stroke=30363D&card_width=760" alt="GitHub contribution streak" />
+  <img src="./assets/stats.svg" alt="Contribution activity over the last year, private repositories included" width="760" />
+</p>
+
+<p align="center">
+  <sub>Rebuilt daily by <a href="scripts/build-stats.py">scripts/build-stats.py</a> — the hosted streak cards
+  query GitHub with their own token and therefore only ever see public repositories.</sub>
 </p>
 
 <p align="center">
