@@ -14,9 +14,14 @@
 
 ## Focus
 
-<p align="center">
-  <img width="760" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/focus.png" alt="Systems, desktop UI, Linux, Windows, digging, shipping" />
-</p>
+```
+Systems     │  Frame capture · Hardware encoding · Audio pipelines
+Desktop UI  │  Qt Quick · QML · GTK4 · WPF · Tauri · Ratatui
+Linux       │  Wayland · PipeWire · inotify · systemd · Arch packaging
+Windows     │  Graphics Capture · D3D11 · Media Foundation · WASAPI
+Digging     │  Binary formats · Patching packaged apps · Tracing
+Shipping    │  Warnings as errors · Native CI · MSI · AppImage · AUR
+```
 
 ## Stack
 

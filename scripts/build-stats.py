@@ -463,7 +463,6 @@ def main() -> int:
         "stats": render(args.login, user, days),
         "languages": render_languages(*languages()),
     }
-    cards["focus"] = render_focus()
     cards.update(pins([
         ("mika2go", "Wreath"), ("mika2go", "PIDRA"), ("mika2go", "Trellis"),
         ("mika2go", "solis-browser"), ("mika2go", "dotfiles"),
