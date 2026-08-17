@@ -400,6 +400,41 @@ def escape(text: str) -> str:
     return (text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
 
 
+
+SKILLS = [
+    ("Systems", ["Frame capture", "Hardware encoding",
+                 "Audio pipelines", "Memory held to a budget"]),
+    ("Desktop UI", ["Qt Quick · QML", "GTK4 · WPF",
+                    "Tauri + Svelte", "Ratatui"]),
+    ("Linux", ["Wayland · PipeWire", "inotify · systemd units",
+               "Arch packaging"]),
+    ("Windows", ["Graphics Capture", "D3D11 · Media Foundation", "WASAPI"]),
+    ("Digging", ["Binary formats", "Patching packaged apps",
+                 "Tracing real behaviour"]),
+    ("Shipping", ["Warnings as errors", "Native CI",
+                  "MSI · NSIS · AppImage · AUR"]),
+]
+
+
+def render_skill(title: str, items: list[str]) -> str:
+    """Same footprint as a repository card, so the two grids line up."""
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_W}" height="{CARD_H}" '
+        f'viewBox="0 0 {CARD_W} {CARD_H}" font-family="JetBrains Mono, ui-monospace, monospace">',
+        '<style>.h{font-size:12.5px;font-weight:600;fill:#2f81f7}'
+        '.i{font-size:10.5px;fill:#8b949e}</style>',
+        f'<rect width="{CARD_W}" height="{CARD_H}" rx="8" fill="#0d1117" stroke="#21262d"/>',
+        # A short rule instead of an icon: the repository cards carry a glyph,
+        # these do not need one and the page is quieter without it.
+        '<rect x="18" y="22" width="18" height="2" rx="1" fill="#2f81f7"/>',
+        f'<text x="18" y="44" class="h">{escape(title)}</text>',
+    ]
+    for index, item in enumerate(items[:4]):
+        parts.append(f'<text x="18" y="{62 + index * 14}" class="i">{escape(item)}</text>')
+    parts.append("</svg>")
+    return "\n".join(parts) + "\n"
+
+
 def pins(specs: list[tuple[str, str]]) -> dict[str, str]:
     out = {}
     for owner, name in specs:
@@ -424,6 +459,10 @@ def main() -> int:
         "stats": render(args.login, user, days),
         "languages": render_languages(*languages()),
     }
+    cards.update({
+        f"skill-{title.lower().replace(' ', '-')}": render_skill(title, items)
+        for title, items in SKILLS
+    })
     cards.update(pins([
         ("mika2go", "Wreath"), ("mika2go", "PIDRA"), ("mika2go", "Trellis"),
         ("mika2go", "solis-browser"), ("mika2go", "dotfiles"),

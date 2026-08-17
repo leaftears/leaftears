@@ -14,14 +14,14 @@
 
 ## Focus
 
-|  |  |
-| --- | --- |
-| **Systems** | Frame capture, hardware video encoding, audio pipelines, memory held to a budget |
-| **Desktop UI** | Qt Quick · QML · GTK4 · WPF · Tauri + Svelte · Ratatui |
-| **Linux** | Wayland · PipeWire · inotify · systemd units · Arch packaging |
-| **Windows** | Graphics Capture · D3D11 · Media Foundation · WASAPI |
-| **Digging** | Binary formats, patching packaged apps, tracing what a process really does |
-| **Shipping** | Warnings as errors · native CI · MSI · NSIS · AppImage · AUR |
+<p align="left">
+  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-systems.png" alt="systems" />
+  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-desktop-ui.png" alt="desktop ui" />
+  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-linux.png" alt="linux" />
+  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-windows.png" alt="windows" />
+  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-digging.png" alt="digging" />
+  <img width="278" src="https://raw.githubusercontent.com/mika2go/Mika2Go/main/assets/skill-shipping.png" alt="shipping" />
+</p>
 
 ## Stack
 
