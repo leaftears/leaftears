@@ -14,10 +14,22 @@
 
 ## Focus
 
-- Systems programming in **Rust** and **C++** — frame capture, hardware encoding, real-time audio.
-- Native interfaces, no web stack: Qt Quick, GTK4, Direct2D, Ratatui.
-- Local-first by construction — no accounts, no telemetry, no upload path.
-- Budgets measured and published, not asserted.
+- **Systems programming in Rust and C++**, on the paths where latency and memory
+  are the constraint — frame capture, hardware video encoding, audio pipelines,
+  buffers sized to a budget instead of to whatever RAM is free.
+- **Desktop UI across toolkits rather than one framework.** Qt Quick and QML,
+  GTK4, WPF, Tauri with a Svelte front end, Ratatui when a terminal is the
+  honest answer. Chosen per problem, not per habit.
+- **Platform internals on both sides.** Wayland protocols, PipeWire, inotify,
+  systemd user units and Arch packaging on Linux; Windows Graphics Capture,
+  D3D11, Media Foundation and WASAPI on the other.
+- **Figuring out software that will not tell you how it works.** Reading binary
+  formats, patching packaged applications, tracing what a process actually does
+  when the documentation and the behaviour disagree.
+- **Getting it out the door.** Warnings as errors, native CI, MSI and NSIS
+  installers, AppImage and AUR packages, releases exercised in a throwaway VM
+  before they are tagged.
+- Python, TypeScript, C#, Lua and SQL where they are the shorter path.
 
 ## Stack
 
